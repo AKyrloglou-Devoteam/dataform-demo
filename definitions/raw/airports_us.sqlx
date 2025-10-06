@@ -5,7 +5,7 @@ config {
     name: "us_airports"
 }
 
--- declare({
---     schema: "data__raw",
---     name: "us_airports"
--- })
+declare({
+    schema: "data__raw",
+    name: "us_airports"
+})
