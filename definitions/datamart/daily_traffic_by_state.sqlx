@@ -12,7 +12,7 @@ SELECT
   -- Count the number of unique airports reporting data for that day
   COUNT(DISTINCT airport_name) AS reporting_airport_count
 FROM
-  ${ref("stg_airport_traffic")}
+  ${ref('staging', "airport_traffic")}
 GROUP BY
   1, 2
 ORDER BY
