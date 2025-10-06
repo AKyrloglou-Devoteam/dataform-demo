@@ -3,7 +3,7 @@
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "alex-dataform-dev",
-  "defaultLocation": "europe-west2",
+  "defaultLocation": "US",
   "vars": {
     "executionSetting": "dev"
   }
