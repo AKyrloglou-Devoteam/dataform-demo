@@ -1,6 +1,7 @@
 config {
   type: "table",
   schema: "staging",
+  name: "stg__airport_traffic"
   description: "Cleaned and filtered airport traffic data for the United States."
 }
 
@@ -12,7 +13,7 @@ SELECT
   state_region,
   country_name
 FROM
-  ${ref('airports_cleaned')}
+  ${ref('raw__airport_traffic')}
 WHERE
   country_name = 'United States'
   AND percent_of_baseline IS NOT NULL
