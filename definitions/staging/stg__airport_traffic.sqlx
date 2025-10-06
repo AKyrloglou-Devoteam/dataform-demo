@@ -1,7 +1,7 @@
 config {
   type: "table",
   schema: "staging",
-  name: "stg__airport_traffic"
+  name: "stg__airport_traffic",
   description: "Cleaned and filtered airport traffic data for the United States."
 }
 
