@@ -2,6 +2,6 @@ config {
   type: "declaration",
   database: "bigquery-public-data",
   schema: "covid19_geotab_mobility_impact",
-  name: "raw__airport_traffic",
+  name: "airport_traffic",
   description: "Public dataset showing the impact of COVID-19 on airport traffic."
 }

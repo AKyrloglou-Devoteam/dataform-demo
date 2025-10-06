@@ -13,7 +13,7 @@ SELECT
   state_region,
   country_name
 FROM
-  ${ref('raw__airport_traffic')}
+  ${ref('airport_traffic')}
 WHERE
   country_name = 'United States'
   AND percent_of_baseline IS NOT NULL
