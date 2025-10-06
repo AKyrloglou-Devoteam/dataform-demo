@@ -1,0 +1,18 @@
+config {
+  type: "table",
+  schema: "staging",
+  description: "Cleaned and filtered airport traffic data for the United States."
+}
+
+SELECT
+  date,
+  airport_name,
+  percent_of_baseline,
+  city,
+  state_region,
+  country_name
+FROM
+  ${ref("raw_airport_traffic")}
+WHERE
+  country_name = 'United States'
+  AND percent_of_baseline IS NOT NULL
