@@ -1,0 +1,20 @@
+config {
+  type: "table",
+  schema: "datamart",
+  description: "Daily aggregated airport traffic metrics by state."
+}
+
+SELECT
+  date,
+  state_region,
+  -- Calculate the average traffic percentage across all airports in the state for that day
+  AVG(percent_of_baseline) AS avg_percent_of_baseline,
+  -- Count the number of unique airports reporting data for that day
+  COUNT(DISTINCT airport_name) AS reporting_airport_count
+FROM
+  ${ref('stg__airport_traffic')}
+GROUP BY
+  1, 2
+ORDER BY
+  date DESC,
+  state_region
