@@ -1,0 +1,11 @@
+config {
+    type: "view"
+}
+
+SELECT DISTINCT
+  airport_name,
+  city,
+  state_region,
+  country_name
+FROM
+  ${ref('airport_traffic')}
