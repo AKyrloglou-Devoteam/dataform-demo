@@ -8,7 +8,11 @@ SELECT
   date,
   state_region,
   -- Calculate the average traffic percentage across all airports in the state for that day
-  SUM(percent_of_baseline) AS avg_percent_of_baseline,
+<<<<<<< HEAD
+  SUM(percent_of_baseline) AS avg_percent_of_baseline, -- dev1
+=======
+  MAX(percent_of_baseline) AS avg_percent_of_baseline, -- dev2
+>>>>>>> refs/heads/dev
   -- Count the number of unique airports reporting data for that day
   COUNT(DISTINCT airport_name) AS reporting_airport_count
 FROM
