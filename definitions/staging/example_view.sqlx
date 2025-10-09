@@ -12,6 +12,6 @@ FROM
   ${ref('airport_traffic')}
 
  post_operations { 
-    GRANT `roles/bigquery.dataViewer` ON TABLE ${self()} TO "user:alexandros.kyrloglou@devoteam.com"
+    GRANT `roles/bigquery.dataViewer` ON SCHEMA staging TO "user:alkyrl@gmail.com"
 }
 
