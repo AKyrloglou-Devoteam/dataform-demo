@@ -1,6 +1,6 @@
 {
   "name": "dataform-repo-dev",
   "dependencies": {
-    "@dataform/core": "2.4.2"
+    "@dataform/core": "3.0.0"
   }
 }

@@ -1,0 +1,15 @@
+config {
+    type: "table"
+}
+
+SELECT DISTINCT
+  airport_name,
+  city,
+  state_region,
+  country_name
+FROM
+  ${ref('airport_traffic')}
+
+post_operations { 
+    GRANT roles/bigquery.dataViewer ON TABLE ${self()} TO "user:alexandros.kyrloglou@devoteam.com"
+}
